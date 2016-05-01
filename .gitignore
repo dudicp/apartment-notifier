@@ -1,0 +1,16 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.DS_Store
+apartment-notifier.conf
+apartment-notifier.log
+apartments_db.json
+target/
+test.apartments.json
+test.apartments_searcher.conf

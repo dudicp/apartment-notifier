@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+        <RollingFile name="file-log" fileName="apartment-notifier.log"
+                     filePattern="${log-path}/apartment-notifier-%i.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="30 MB" />
+                <!--<TimeBasedTriggeringPolicy interval="1" modulate="true"/>-->
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info" additivity="false">
+            <appender-ref ref="file-log"/>
+        </Root>
+    </Loggers>
+</Configuration>
